@@ -6,6 +6,6 @@ import nms from './media-server';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   nms.run();
-  await app.listen(3000);
+  await app.listen(process.env.PORT || 3000);
 }
 bootstrap();
